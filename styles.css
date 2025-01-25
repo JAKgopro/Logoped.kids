@@ -170,3 +170,53 @@ body.night-mode .cloud:after {
     color: #000; /* Цвет текста при наведении */
     background-color: rgba(255, 255, 255, 0.3); /* Легкий фон поверх кнопки */
 }
+@media (max-width: 768px) {
+    .sun, .moon {
+        width: 50px;
+        height: 50px;
+    }
+    .cloud {
+        width: 40px;
+        height: 25px;
+    }
+    .cloud:before {
+        width: 30px;
+        height: 20px;
+        top: -10px;
+        left: 5px;
+    }
+    .cloud:after {
+        width: 25px;
+        height: 15px;
+        top: 5px;
+        left: -10px;
+    }
+    .block {
+        width: 100px;
+        height: 50px;
+    }
+    .block-1 {
+        width: 100px;
+        height: 50px;
+    }
+    .block-2, .block-3, .block-4 {
+        width: 70px;
+        height: 50px;
+    }
+    .block-5, .block-6, .block-7 {
+        width: 90px;
+        height: 50px;
+    }
+    .block-8, .block-9, .block-10 {
+        width: 110px;
+        height: 50px;
+    }
+    .block-11, .block-12, .block-13, .block-14, .block-15 {
+        width: 80px;
+        height: 50px;
+    }
+    .block-16, .block-17, .block-18 {
+        width: 170px;
+        height: 55px;
+    }
+}
