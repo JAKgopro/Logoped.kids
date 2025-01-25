@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .text-above {
+            position: absolute;
+            top: -20px; /* Adjust as needed */
+            left: 0;
+        }
+          .text-left {
+        position: absolute;
+        top: 50%; /* Center vertically */
+        left: -130px; /* Adjust as needed */
+        transform: translateY(-50%); /* Adjust to center vertically */
+        background: linear-gradient(to right, rgb(183, 101, 1), rgb(0, 21, 211) );
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        font-style: oblique;
+       
+
+    }
+        .block-container {
+            position: relative;
+            display: inline-block;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="sun" onclick="toggleNightMode()"></div>
+    <div class="clouds" >
+        <div class="cloud"></div>
+        <div class="cloud"></div>
+        <div class="cloud"></div>
+    </div>
+    <div class="pyramid">
+    
+    
+     
+        <!-- Add more rows here -->
+    </div>
+<div class="pyramid">
+        <div class="row">
+            <div class="block-container">
+                <div class="text-left " style="left: -100px;">танымдық <br> қабілеттерін  <br> дамыту</div>
+                   <div class="block block-1"><a href="bilim-beru.html">Білім беру</a></div>
+            </div>
+         
+        </div>
+        <div class="row">
+            <div class="block-container">
+                <div class="text-left"><h5>Перцептивті  <br> жүйені  дамыту</h5></div>
+            <div class="block block-2"><a href="kozben-qoldy-uilestiru.html">Көзбен қолды үйлестіру</a></div>
+         </div>
+            <div class="block block-3"><a href="minez-qulyq.html">Мінез-құлық</a></div>
+            <div class="block block-4"><a href="ozin-ozi-reteu.html">Өзін-өзі реттеу</a></div>
+        </div>
+        <div class="row">
+            <div class="block-container">
+                <div class="text-left"><h5>сенсомоториканы  <br> жүйесін  дамыту</h5></div>
+            <div class="block block-5"><a href="kozben-qoldy-uilestiru.html">Көзбен қолды үйлестіру</a></div>
+         </div>
+            <div class="block block-6"><a href="tauelsizdik.html">Тәуелсіздік</a></div>
+            <div class="block block-7"><a href="kenistikte-baghdarlau.html">Кеңістікте бағдарлау</a></div>
+        </div>
+        <div class="row">
+            <div class="block block-8"><a href="qozghalysty-zhosparlau.html">Қозғалысты жоспарлау</a></div>
+            <div class="block block-9"><a href="nazaryn-shoghyrlau.html">Назарын шоғырландыру</a></div>
+            <div class="block block-10"><a href="deneni-baqylau.html">Дененi бақылау</a></div>
+        </div>
+        <div class="row">
+            <div class="block-container">
+                <div class="text-left " style="left: -100px;"><h5>сеннорлық <br> жүйені <br> дамыту</h5></div>
+                <div class="block block-11"><a href="estu.html">Есту</a></div>
+            </div>
+            <div class="block block-12"><a href="koru.html">Көру</a></div>
+            <div class="block block-13"><a href="sipap-sezu.html">Сипап сезу</a></div>
+            <div class="block block-14"><a href="damin-sezu.html">Дәмін сезу</a></div>
+            <div class="block block-15"><a href="iiskeu.html">Иіскеу</a></div>
+        </div>
+        <div class="row">
+            <div class="block block-16"><a href="terimen-seziny.html">Терімен сезіну</a></div>
+            <div class="block block-17"><a href="tepe-tendik.html">Тепе-теңдікті сезіну</a></div>
+            <div class="block block-18"><a href="bylwiketter.html">Бұлшықеттер мен буындарды сезіну</a></div>
+        </div>
+    </div>
+    <script>
+         function toggleNightMode() {
+            document.body.classList.toggle('night-mode');
+            document.querySelector('.sun').classList.toggle('moon');
+        }
+
+        function toggleRainMode() {
+            document.body.classList.toggle('rain-mode');
+        }
+    </script>
+</body>
+</html>
