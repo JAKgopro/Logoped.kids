@@ -1,0 +1,257 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(to bottom, #87CEEB 60%, #32CD32 40%);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    position: relative;
+    transition: background 0.5s ease;
+}
+
+body.night-mode {
+    background: linear-gradient(to bottom, #000033 60%, #000000 40%);
+    color: white;
+}
+
+body.rain-mode {
+    background: linear-gradient(to bottom, #87CEEB 60%, #32CD32 40%);
+    background-image: url('rain.gif');
+    background-size: cover;
+}
+
+.pyramid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    gap: 10px;
+}
+
+.block-container {
+    position: relative;
+    display: inline-block;
+}
+
+.text-left {
+    position: absolute;
+    top: 50%;
+    left: -120px;
+    transform: translateY(-50%);
+    background: linear-gradient(to right, rgb(183, 101, 1), rgb(0, 21, 211));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-style: oblique;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: right;
+    white-space: nowrap;
+}
+
+.block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    overflow: hidden;
+    border: 1px solid black;
+    padding: 10px;
+    width: 120px;
+    height: 60px;
+}
+
+.block a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.block a i {
+    margin-right: 8px;
+}
+
+.block:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.block a:hover {
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.sun {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, #FFD700 60%, rgba(255, 223, 0, 0.5) 80%);
+    border-radius: 50%;
+    box-shadow: 0 0 20px 5px #FFD700;
+    cursor: pointer;
+    transition: background 0.5s ease;
+}
+
+.moon {
+    background: radial-gradient(circle, #FFF 60%, rgba(255, 255, 255, 0.5) 80%);
+    box-shadow: 0 0 20px 5px #FFF;
+}
+
+.clouds {
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    display: flex;
+    gap: 15px;
+    cursor: pointer;
+}
+
+.cloud {
+    width: 80px;
+    height: 50px;
+    background: #FFF;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    transition: background 0.5s ease;
+}
+
+body.night-mode .cloud {
+    background: #333;
+}
+
+.cloud:before,
+.cloud:after {
+    content: "";
+    position: absolute;
+    background: #FFF;
+    border-radius: 50%;
+    transition: background 0.5s ease;
+}
+
+body.night-mode .cloud:before,
+body.night-mode .cloud:after {
+    background: #333;
+}
+
+.cloud:before {
+    width: 60px;
+    height: 40px;
+    top: -20px;
+    left: 10px;
+}
+
+.cloud:after {
+    width: 50px;
+    height: 30px;
+    top: 10px;
+    left: -20px;
+}
+
+/* Медиа-запросы для мобильных устройств */
+@media (max-width: 768px) {
+    .block {
+        width: 90px;
+        height: 50px;
+        font-size: 12px;
+    }
+
+    .block a {
+        font-size: 12px;
+    }
+
+    .text-left {
+        left: -90px;
+        font-size: 14px;
+    }
+
+    .sun, .moon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .cloud {
+        width: 50px;
+        height: 30px;
+    }
+
+    .cloud:before {
+        width: 40px;
+        height: 25px;
+    }
+
+    .cloud:after {
+        width: 30px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .block {
+        width: 80px;
+        height: 40px;
+        font-size: 10px;
+    }
+
+    .block a {
+        font-size: 10px;
+    }
+
+    .text-left {
+        left: -80px;
+        font-size: 12px;
+    }
+
+    .sun, .moon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .cloud {
+        width: 30px;
+        height: 20px;
+    }
+
+    .cloud:before {
+        width: 20px;
+        height: 15px;
+    }
+
+    .cloud:after {
+        width: 15px;
+        height: 10px;
+    }
+
+    body {
+        background: linear-gradient(to bottom, #87CEEB 70%, #32CD32 30%);
+    }
+
+    body.night-mode {
+        background: linear-gradient(to bottom, #000033 70%, #000000 30%);
+    }
+
+    body.rain-mode {
+        background: linear-gradient(to bottom, #87CEEB 70%, #32CD32 30%);
+        background-image: url('rain.gif');
+        background-size: cover;
+    }
+}
